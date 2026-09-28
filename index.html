@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiscina Golf</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; line-height: 1.6; background-color: #f9f9f9; color: #333; }
+        header { background-color: #2c5e1a; color: white; padding: 1.5rem 2rem; display: flex; flex-direction: column; align-items: center; border-bottom: 5px solid #1a3b10; }
+        header .logo-container { margin-bottom: 1rem; }
+        header strong { font-size: 1.5rem; letter-spacing: 2px; text-transform: uppercase; }
+        header h1 { margin: 0; font-size: 2rem; font-weight: 300; }
+        header nav ul { list-style: none; padding: 0; display: flex; gap: 2rem; margin-top: 1.5rem; }
+        header nav a { color: white; text-decoration: none; font-weight: bold; padding: 0.5rem 1rem; border-radius: 4px; transition: background-color 0.3s; }
+        header nav a:hover { background-color: #3f8028; }
+        
+        main { padding: 3rem 2rem; max-width: 1100px; margin: auto; }
+        section { margin-bottom: 4rem; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        h2 { color: #2c5e1a; border-bottom: 2px solid #e0e0e0; padding-bottom: 0.5rem; margin-top: 0; }
+        h3 { color: #444; }
+        p { margin-bottom: 1rem; font-size: 1.05rem; }
+        
+        .hero-img { width: 100%; height: 400px; object-fit: cover; border-radius: 8px; margin-top: 1rem; }
+        
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 1.5rem; }
+        .gallery img { width: 100%; height: 250px; object-fit: cover; border-radius: 8px; transition: transform 0.3s ease; }
+        .gallery img:hover { transform: scale(1.03); }
+        
+        ul, ol { padding-left: 1.5rem; font-size: 1.05rem; }
+        li { margin-bottom: 0.5rem; }
+        
+        a.external-link { color: #2c5e1a; font-weight: bold; text-decoration: none; border-bottom: 1px dotted #2c5e1a; }
+        a.external-link:hover { color: #1a3b10; border-bottom-style: solid; }
+        
+        footer { background-color: #222; color: #ccc; text-align: center; padding: 3rem 2rem; margin-top: 2rem; }
+        footer p { margin: 0.5rem 0; font-size: 0.95rem; }
+        footer .phrase { margin-top: 1.5rem; font-style: italic; color: #fff; font-size: 1.1rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <strong>Fiscina - Vetere Golf</strong>
+        </div>
+        <h1>Bienvenidos al Mundo del Golf</h1>
+        <nav>
+            <ul>
+                <li><a href="#presentacion">Inicio</a></li>
+                <li><a href="#informacion">Información</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#curiosidades">Curiosidades</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="presentacion">
+            <h2>Presentación</h2>
+            <p>Descubrí la elegancia, la precisión y la tranquilidad del deporte más fascinante. Nuestro sitio está dedicado a compartir la pasión por el golf, uniendo a jugadores, aficionados y curiosos que quieran aprender más sobre esta increíble disciplina.</p>
+            <img src="https://images.unsplash.com/photo-1587329310686-91414b8e3cb7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Campo de Golf al atardecer" class="hero-img">
+        </section>
+
+        <section id="informacion">
+            <h2>¿Qué es el Golf?</h2>
+            <p>El golf es un deporte de precisión cuyo objetivo es introducir una pequeña bola en los hoyos que están distribuidos en el campo con el menor número de golpes posible. Se utiliza para cada tipo de golpe uno de entre un conjunto de palos con cabezas de distintos ángulos y formas.</p>
+            <h3>Beneficios del deporte</h3>
+            <p>Practicar golf no solo ayuda a mantener una buena salud cardiovascular por las largas caminatas en espacios verdes, sino que también fomenta la concentración, la disciplina y reduce el estrés.</p>
+        </section>
+
+        <section id="galeria">
+            <h2>Galería de Imágenes</h2>
+            <p>Un recorrido visual por los elementos y paisajes que hacen único a este deporte:</p>
+            <div class="gallery">
+                <img src="https://images.unsplash.com/photo-1592919505780-303950717480?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Jugador de golf realizando un swing perfecto">
+                <img src="https://images.unsplash.com/photo-1535136124976-749e7b212f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pelota de golf blanca sobre el césped verde">
+                <img src="https://images.unsplash.com/photo-1535139262971-c51845709a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Carrito de golf recorriendo el campo">
+            </div>
+        </section>
+
+        <section id="curiosidades">
+            <h2>Datos Destacados y Curiosidades</h2>
+            <ul>
+                <li><strong>Hoyuelos en la pelota:</strong> La pelota de golf moderna tiene entre 300 y 450 hoyuelos. Esto reduce la resistencia aerodinámica y le permite volar mucho más lejos que una bola lisa.</li>
+                <li><strong>Golf en el espacio:</strong> Es uno de los dos únicos deportes que se han jugado en la luna. En 1971, el astronauta Alan Shepard golpeó una pelota de golf durante la misión Apolo 14.</li>
+                <li><strong>El campo más antiguo:</strong> El Old Course de St Andrews en Escocia es considerado el campo de golf más antiguo del mundo, donde se juega desde principios del siglo XV.</li>
+            </ul>
+            <p>Para más información detallada sobre las reglas, torneos y la historia, te invitamos a visitar el artículo completo en <a href="https://es.wikipedia.org/wiki/Golf" target="_blank" class="external-link">Wikipedia sobre el Golf</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p><strong>Estudiantes:</strong> Facundo Fiscina, [Nombre] Vetere</p>
+        <p><strong>Curso:</strong> 5to Año</p>
+        <p><strong>Año:</strong> 2026</p>
+        <p class="phrase">"El golf es un juego que no se puede ganar, solo se puede jugar."</p>
+    </footer>
+
+</body>
+</html>

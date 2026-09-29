@@ -3,441 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EL VERDE - Viajes Legendarios de Golf</title>
-    <!-- Google Fonts: Inter -->
+    <title>EL VERDE - Donde comienzan los viajes legendarios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-color: #ffffff;
-            --text-main: #111111;
-            --text-muted: #666666;
-            --border-color: #eaeaea;
-            --accent-color: #111111;
-            --btn-hover: #333333;
-            --card-bg: #f9f9f9;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        html { scroll-behavior: smooth; }
-
-        body { 
-            font-family: 'Inter', sans-serif; 
-            background-color: var(--bg-color); 
-            color: var(--text-main); 
-            line-height: 1.5;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* --- Header --- */
-        header {
-            border-bottom: 1px solid var(--border-color);
-            padding: 20px 0;
-            background: white;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-weight: 800;
-            font-size: 1.25rem;
-            text-transform: uppercase;
-            letter-spacing: -0.5px;
-        }
-        
-        .logo-icon {
-            width: 20px;
-            height: 20px;
-            background-color: var(--accent-color);
-            border-radius: 2px;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 32px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--text-main);
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: color 0.2s;
-        }
-
-        nav a:hover {
-            color: var(--text-muted);
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            border-radius: 4px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            text-decoration: none;
-            cursor: pointer;
-            transition: all 0.2s;
-            border: 1px solid transparent;
-        }
-
-        .btn-primary {
-            background-color: var(--accent-color);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background-color: var(--btn-hover);
-        }
-
-        .btn-outline {
-            background-color: transparent;
-            border-color: var(--border-color);
-            color: var(--text-main);
-        }
-
-        .btn-outline:hover {
-            border-color: var(--text-main);
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        /* --- Main Content --- */
-        main { padding-bottom: 80px; }
-
-        /* Hero Section */
-        .hero {
-            padding: 80px 0;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 64px;
-            align-items: center;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            line-height: 1.1;
-            letter-spacing: -1.5px;
-            margin-bottom: 24px;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            color: var(--text-muted);
-            margin-bottom: 40px;
-            max-width: 90%;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 16px;
-        }
-
-        .hero-image {
-            width: 100%;
-            height: 500px;
-            background-color: var(--card-bg);
-            border-radius: 8px;
-            object-fit: cover;
-        }
-
-        /* Section Global Styles */
-        .section-label {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: var(--text-muted);
-            font-weight: 600;
-            margin-bottom: 8px;
-            display: block;
-        }
-        
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 800;
-            letter-spacing: -1px;
-            margin-bottom: 48px;
-        }
-
-        /* Campos Section */
-        .campos-section {
-            padding: 80px 0;
-            border-top: 1px solid var(--border-color);
-        }
-        
-        .grid-campos {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px 32px;
-        }
-
-        .card-campo img {
-            width: 100%;
-            aspect-ratio: 16/10;
-            object-fit: cover;
-            border-radius: 8px;
-            background-color: var(--card-bg);
-            margin-bottom: 20px;
-        }
-
-        .card-campo h3 {
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 4px;
-        }
-
-        .card-campo .location {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-            margin-bottom: 12px;
-        }
-
-        .card-campo p {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-        }
-
-        /* Golfistas Section */
-        .golfistas-section {
-            padding: 80px 0;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .grid-golfistas {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-        }
-
-        .card-golfista {
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 32px 24px;
-            text-align: center;
-            background: white;
-            transition: box-shadow 0.2s;
-        }
-
-        .card-golfista:hover {
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
-
-        .avatar {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background-color: var(--card-bg);
-            margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--accent-color);
-        }
-
-        .card-golfista h3 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin-bottom: 4px;
-        }
-
-        .card-golfista .location {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            margin-bottom: 16px;
-        }
-
-        .card-golfista .stats {
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--accent-color);
-            padding-top: 16px;
-            border-top: 1px solid var(--border-color);
-        }
-
-        /* --- Footer --- */
-        footer {
-            border-top: 1px solid var(--border-color);
-            padding: 80px 0 40px;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: 64px;
-            margin-bottom: 64px;
-        }
-
-        .footer-brand .logo {
-            margin-bottom: 24px;
-        }
-
-        .footer-brand p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            max-width: 300px;
-        }
-
-        .footer-nav h4, .footer-newsletter h4 {
-            font-size: 0.95rem;
-            font-weight: 700;
-            margin-bottom: 24px;
-        }
-
-        .footer-nav ul {
-            list-style: none;
-        }
-
-        .footer-nav li {
-            margin-bottom: 12px;
-        }
-
-        .footer-nav a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.95rem;
-        }
-
-        .footer-nav a:hover {
-            color: var(--accent-color);
-        }
-
-        .footer-newsletter p {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-bottom: 24px;
-        }
-        
-        .newsletter-form {
-            display: flex;
-            gap: 8px;
-        }
-
-        .newsletter-form input {
-            flex: 1;
-            padding: 12px 16px;
-            border: 1px solid var(--border-color);
-            border-radius: 4px;
-            font-family: inherit;
-            font-size: 0.9rem;
-        }
-
-        .newsletter-form input:focus {
-            outline: none;
-            border-color: var(--accent-color);
-        }
-
-        .footer-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 32px;
-            border-top: 1px solid var(--border-color);
-            color: var(--text-muted);
-            font-size: 0.85rem;
-        }
-        
-        .footer-bottom a {
-            color: var(--text-muted);
-            text-decoration: none;
-            margin-left: 24px;
-        }
-
-        .footer-bottom a:hover {
-            color: var(--accent-color);
-        }
-
-        /* --- Responsive Design (Mobile) --- */
-        @media (max-width: 1024px) {
-            .hero {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 40px;
-                padding: 40px 0;
-            }
-            .hero h1 { font-size: 3rem; }
-            .hero p { margin: 0 auto 32px; }
-            .hero-buttons { justify-content: center; }
-            .grid-campos { grid-template-columns: repeat(2, 1fr); }
-            .grid-golfistas { grid-template-columns: repeat(2, 1fr); }
-            .footer-grid { grid-template-columns: 1fr 1fr; }
-        }
-
-        @media (max-width: 768px) {
-            nav ul, .header-content .btn {
-                display: none;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .hero h1 { font-size: 2.5rem; }
-            .hero-buttons { flex-direction: column; width: 100%; }
-            .hero-buttons .btn { width: 100%; text-align: center; }
-            .hero-image { height: 300px; }
-
-            .grid-campos { grid-template-columns: 1fr; }
-            .grid-golfistas { grid-template-columns: 1fr; }
-            
-            .footer-grid { grid-template-columns: 1fr; gap: 40px; }
-            .newsletter-form { flex-direction: column; }
-            
-            .footer-bottom {
-                flex-direction: column;
-                gap: 16px;
-                text-align: center;
-            }
-            .footer-bottom div {
-                display: flex;
-                flex-direction: column;
-                gap: 8px;
-            }
-            .footer-bottom a { margin-left: 0; }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <header>
-        <div class="container header-content">
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
             <div class="logo">
                 <div class="logo-icon"></div>
-                EL VERDE
+                <span>EL VERDE</span>
             </div>
-            <nav>
+            
+            <nav class="desktop-nav">
                 <ul>
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#campos">Campos</a></li>
@@ -445,183 +26,224 @@
                     <li><a href="#acerca">Acerca de</a></li>
                 </ul>
             </nav>
-            <a href="#" class="btn btn-primary">Únete al club</a>
-            <button class="mobile-menu-btn">☰</button>
+            
+            <div class="header-actions">
+                <button class="btn btn-primary btn-sm">Únete al club</button>
+                <button class="mobile-menu-btn" aria-label="Abrir menú">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+            </div>
         </div>
     </header>
 
     <main>
-        <!-- Sección 1: Presentación (Hero) -->
-        <section id="inicio" class="hero container">
-            <div class="hero-text">
-                <h1>Donde comienzan los viajes legendarios</h1>
-                <p>Explora la herencia, la estructura y los mejores jugadores del juego. Un catálogo limpio de los paisajes y campeones definitivos del golf.</p>
-                <div class="hero-buttons">
-                    <a href="#campos" class="btn btn-primary">Explorar Campos</a>
-                    <a href="#golfistas" class="btn btn-outline">Conoce a campeones</a>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1>Donde comienzan los viajes legendarios</h1>
+                    <p>Explora la herencia, la estructura y los mejores jugadores del juego. Un catálogo limpio de los paisajes y campeones definitivos del golf.</p>
+                    <div class="hero-buttons">
+                        <a href="#campos" class="btn btn-primary">Explorar Campos</a>
+                        <a href="#golfistas" class="btn btn-outline">Conocer campeones</a>
+                    </div>
                 </div>
-            </div>
-            <img src="https://images.unsplash.com/photo-1587329310686-91414b8e3cb7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Paisaje de golf" class="hero-image">
-        </section>
-
-        <!-- Sección 2: Campos (Información e Imágenes) -->
-        <section id="campos" class="campos-section">
-            <div class="container">
-                <span class="section-label">Selección Cuidada</span>
-                <h2 class="section-title">Campos Legendarios</h2>
-                
-                <div class="grid-campos">
-                    <article class="card-campo">
-                        <img src="https://images.unsplash.com/photo-1592919505780-303950717480?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Augusta National">
-                        <h3>Augusta National</h3>
-                        <div class="location">Georgia, EE. UU.</div>
-                        <p>Sede del Masters y fairways impecables enmarcados por pinos.</p>
-                    </article>
-                    
-                    <article class="card-campo">
-                        <img src="https://images.unsplash.com/photo-1535136124976-749e7b212f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="St Andrews">
-                        <h3>St Andrews (Old Course)</h3>
-                        <div class="location">Fife, Escocia</div>
-                        <p>La cuna histórica del golf con el icónico puente Swilcan y profundos búnkeres.</p>
-                    </article>
-                    
-                    <article class="card-campo">
-                        <img src="https://images.unsplash.com/photo-1593111774240-d529f12eb606?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pebble Beach">
-                        <h3>Pebble Beach</h3>
-                        <div class="location">California, EE. UU.</div>
-                        <p>Acantilados costeros impresionantes que se encuentran con las olas del Pacífico.</p>
-                    </article>
-                    
-                    <article class="card-campo">
-                        <img src="https://images.unsplash.com/photo-1622228399587-25e1a3bc08e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Royal Melbourne">
-                        <h3>Royal Melbourne</h3>
-                        <div class="location">Victoria, Australia</div>
-                        <p>El clásico del cinturón de arena australiano con un bunkering dramático.</p>
-                    </article>
-                    
-                    <article class="card-campo">
-                        <img src="https://images.unsplash.com/photo-1535139262971-c51845709a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Pinehurst No. 2">
-                        <h3>Pinehurst No. 2</h3>
-                        <div class="location">Carolina del Norte, EE. UU.</div>
-                        <p>Obra maestra de Donald Ross famosa por sus greens "turtleneck" desafiantes.</p>
-                    </article>
-                    
-                    <article class="card-campo">
-                        <img src="https://images.unsplash.com/photo-1621255857211-16474bc936df?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Torrey Pines">
-                        <h3>Torrey Pines</h3>
-                        <div class="location">California, EE. UU.</div>
-                        <p>Campo frente al mar de campeonato tallado en acantilados costeros dramáticos.</p>
-                    </article>
+                <div class="hero-image">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Ballybunion_Golf_Club_-_10th_hole.jpg" alt="Campo de golf legendario" class="hero-image-img" />
                 </div>
             </div>
         </section>
 
-        <!-- Sección 3: Golfistas (Datos destacados/Curiosidades) -->
-        <section id="golfistas" class="golfistas-section">
+        <!-- Campos Legendarios Section -->
+        <section id="campos" class="courses section">
             <div class="container">
-                <span class="section-label">Íconos del Deporte</span>
-                <h2 class="section-title">Los Mejores Golfistas</h2>
+                <div class="section-header">
+                    <span class="subtitle">SELECCIÓN CURADA</span>
+                    <h2>Campos Legendarios</h2>
+                </div>
                 
-                <div class="grid-golfistas">
-                    <article class="card-golfista">
-                        <div class="avatar">TW</div>
+                <div class="courses-grid">
+                    <!-- Course 1 -->
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/AugustaNationalMastersLogoFlowers.jpg/960px-AugustaNationalMastersLogoFlowers.jpg" alt="Augusta National" />
+                        </div>
+                        <div class="course-info">
+                            <h3>Augusta National</h3>
+                            <span class="location">GEORGIA, EE. UU.</span>
+                            <p>Sede del Masters y fairways impecables enmarcados por pinos.</p>
+                        </div>
+                    </div>
+                    <!-- Course 2 -->
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Swilken_Bridge%2C_Old_Course_geograph-6310525-by-Gordon-Hatton.jpg/960px-Swilken_Bridge%2C_Old_Course_geograph-6310525-by-Gordon-Hatton.jpg" alt="St Andrews (Old Course)" />
+                        </div>
+                        <div class="course-info">
+                            <h3>St Andrews (Old Course)</h3>
+                            <span class="location">FIFE, ESCOCIA</span>
+                            <p>La casa histórica del golf con el icónico puente Swilcan y profundos búnkeres.</p>
+                        </div>
+                    </div>
+                    <!-- Course 3 -->
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Pebble_Beach_Golf_Links%2C_hole_7.jpg" alt="Pebble Beach" />
+                        </div>
+                        <div class="course-info">
+                            <h3>Pebble Beach</h3>
+                            <span class="location">CALIFORNIA, EE. UU.</span>
+                            <p>Acantilados costeros impresionantes que se encuentran con las olas del Pacífico.</p>
+                        </div>
+                    </div>
+                    <!-- Course 4 -->
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Putting_green_at_the_Royal_Canberra_Golf_Club_4.JPG" alt="Royal Melbourne" />
+                        </div>
+                        <div class="course-info">
+                            <h3>Royal Melbourne</h3>
+                            <span class="location">VICTORIA, AUSTRALIA</span>
+                            <p>El clásico del cinturón de arena australiano con un bunkering dramático.</p>
+                        </div>
+                    </div>
+                    <!-- Course 5 -->
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Pinehurst_No._2.JPG" alt="Pinehurst No. 2" />
+                        </div>
+                        <div class="course-info">
+                            <h3>Pinehurst No. 2</h3>
+                            <span class="location">CAROLINA DEL NORTE, EE. UU.</span>
+                            <p>Obra maestra de Donald Ross famosa por sus greens "turtleback" desafiantes.</p>
+                        </div>
+                    </div>
+                    <!-- Course 6 -->
+                    <div class="course-card">
+                        <div class="course-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Torrey_Pines_Golf_Course_clubhouse.jpg" alt="Torrey Pines" />
+                        </div>
+                        <div class="course-info">
+                            <h3>Torrey Pines</h3>
+                            <span class="location">CALIFORNIA, EE. UU.</span>
+                            <p>Campos de campeonato frente al mar tallados en acantilados costeros dramáticos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Los Mejores Golfistas Section -->
+        <section id="golfistas" class="golfers section border-top">
+            <div class="container">
+                <div class="section-header">
+                    <span class="subtitle">ÍCONOS DEL FAIRWAY</span>
+                    <h2>Los Mejores Golfistas</h2>
+                </div>
+                
+                <div class="golfers-grid">
+                    <!-- Golfer 1 -->
+                    <div class="golfer-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/President_Donald_Trump_hosts_a_reception_honoring_Black_History_Month_%2854341713089%29_%28cropped%29.jpg" alt="Tiger Woods" class="avatar-img" />
                         <h3>Tiger Woods</h3>
-                        <div class="location">EE. UU.</div>
+                        <span class="location">EE. UU.</span>
                         <div class="stats">15 Victorias en Majors</div>
-                    </article>
-                    <article class="card-golfista">
-                        <div class="avatar">JN</div>
+                    </div>
+                    <!-- Golfer 2 -->
+                    <div class="golfer-card">
+                        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Panther_National_Jack_and_Justin-8452_%283x4_cropped%29.jpg/960px-Panther_National_Jack_and_Justin-8452_%283x4_cropped%29.jpg" alt="Jack Nicklaus" class="avatar-img" />
                         <h3>Jack Nicklaus</h3>
-                        <div class="location">EE. UU.</div>
+                        <span class="location">EE. UU.</span>
                         <div class="stats">18 Victorias en Majors</div>
-                    </article>
-                    <article class="card-golfista">
-                        <div class="avatar">AP</div>
+                    </div>
+                    <!-- Golfer 3 -->
+                    <div class="golfer-card">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/YN3ArnoldPalmer.jpg" alt="Arnold Palmer" class="avatar-img" />
                         <h3>Arnold Palmer</h3>
-                        <div class="location">EE. UU.</div>
+                        <span class="location">EE. UU.</span>
                         <div class="stats">7 Victorias en Majors</div>
-                    </article>
-                    <article class="card-golfista">
-                        <div class="avatar">GP</div>
+                    </div>
+                    <!-- Golfer 4 -->
+                    <div class="golfer-card">
+                        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/All_Black_%28cropped%29.jpg/960px-All_Black_%28cropped%29.jpg" alt="Gary Player" class="avatar-img" />
                         <h3>Gary Player</h3>
-                        <div class="location">Sudáfrica</div>
+                        <span class="location">Sudáfrica</span>
                         <div class="stats">9 Victorias en Majors</div>
-                    </article>
-                    <article class="card-golfista">
-                        <div class="avatar">SB</div>
+                    </div>
+                    <!-- Golfer 5 -->
+                    <div class="golfer-card">
+                        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Seve_Ballesteros_2006-07-19_%28cropped%29.jpg/960px-Seve_Ballesteros_2006-07-19_%28cropped%29.jpg" alt="Seve Ballesteros" class="avatar-img" />
                         <h3>Seve Ballesteros</h3>
-                        <div class="location">España</div>
+                        <span class="location">España</span>
                         <div class="stats">5 Victorias en Majors</div>
-                    </article>
-                    <article class="card-golfista">
-                        <div class="avatar">RM</div>
+                    </div>
+                    <!-- Golfer 6 -->
+                    <div class="golfer-card">
+                        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Rory_McIlroy_Ryder_Cup_2025-195_%28cropped%29.jpg/960px-Rory_McIlroy_Ryder_Cup_2025-195_%28cropped%29.jpg" alt="Rory McIlroy" class="avatar-img" />
                         <h3>Rory McIlroy</h3>
-                        <div class="location">Irlanda del Norte</div>
+                        <span class="location">Irlanda del Norte</span>
                         <div class="stats">4 Victorias en Majors</div>
-                    </article>
-                    <article class="card-golfista">
-                        <div class="avatar">AS</div>
+                    </div>
+                    <!-- Golfer 7 -->
+                    <div class="golfer-card">
+                        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/2008_LPGA_Championship_-_Annika_Sorenstam_tee_shot.jpg/960px-2008_LPGA_Championship_-_Annika_Sorenstam_tee_shot.jpg" alt="Annika Sörenstam" class="avatar-img" />
                         <h3>Annika Sörenstam</h3>
-                        <div class="location">Suecia</div>
+                        <span class="location">Suecia</span>
                         <div class="stats">10 Victorias en Majors</div>
-                    </article>
-                    <article class="card-golfista">
-                        <div class="avatar">BJ</div>
+                    </div>
+                    <!-- Golfer 8 -->
+                    <div class="golfer-card">
+                        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Bobby_Jones_c1921.jpg/960px-Bobby_Jones_c1921.jpg" alt="Bobby Jones" class="avatar-img" />
                         <h3>Bobby Jones</h3>
-                        <div class="location">EE. UU.</div>
+                        <span class="location">EE. UU.</span>
                         <div class="stats">13 Victorias en Majors</div>
-                    </article>
+                    </div>
                 </div>
             </div>
-        </section>
-        
-        <!-- Sección 4: Suscripción (Agregada para cumplir estrictamente requisito de 4 secciones) -->
-        <section class="newsletter-section" style="display: none;">
-            <!-- El contenido real del newsletter está en el footer, 
-            esta sección asegura validación semántica si es analizada automáticamente -->
         </section>
     </main>
 
     <!-- Footer -->
-    <footer id="acerca">
+    <footer id="acerca" class="footer">
         <div class="container">
-            <div class="footer-grid">
+            <div class="footer-top">
                 <div class="footer-brand">
                     <div class="logo">
                         <div class="logo-icon"></div>
-                        EL VERDE
+                        <span>EL VERDE</span>
                     </div>
-                    <p>Un boceto integral que explora los destinos y leyendas definitivos del golf. Diseñado para coleccionistas.</p>
+                    <p>Un boceto integral que explora los destinos y leyendas definitivos del golf. Diseñado para usabilidad a lo TL.</p>
                 </div>
                 
-                <div class="footer-nav">
-                    <h4>Navegación</h4>
-                    <ul>
-                        <li><a href="#inicio">Acerca de nosotros</a></li>
-                        <li><a href="#campos">Campos</a></li>
-                        <li><a href="#golfistas">Campeones</a></li>
-                    </ul>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Navegación</h4>
+                        <ul>
+                            <li><a href="#acerca">Acerca de nosotros</a></li>
+                            <li><a href="#campos">Campos</a></li>
+                            <li><a href="#golfistas">Campeones</a></li>
+                        </ul>
+                    </div>
                 </div>
                 
                 <div class="footer-newsletter">
                     <h4>Boletín</h4>
-                    <p>Inscríbete para recibir actualizaciones semanales sobre reseñas de campos y archivos de torneos.</p>
+                    <p>Suscríbete para recibir actualizaciones semanales sobre reseñas de campos y archivos de torneos.</p>
                     <form class="newsletter-form">
                         <input type="email" placeholder="Correo electrónico" required>
-                        <button type="submit" class="btn btn-primary">Suscribirse</button>
+                        <button type="submit" class="btn btn-primary">Suscríbete</button>
                     </form>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2024 EL VERDE. Todos los derechos reservados.</p>
-                <div>
+                <p>&copy; 2024 El Verde. Construido en espíritu de usuario.</p>
+                <div class="legal-links">
                     <a href="#">Política de privacidad</a>
                     <a href="#">Términos de uso</a>
                 </div>
             </div>
         </div>
     </footer>
-
 </body>
 </html>

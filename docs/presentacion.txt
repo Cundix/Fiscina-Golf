@@ -1,0 +1,11 @@
+Mi proyecto se llama El Verde y trata sobre el golf. Elegí este tema porque permite combinar información deportiva con fotografías de campos de distintos lugares del mundo. La idea fue presentar una selección de recorridos y jugadores reconocidos de una manera clara y fácil de consultar.
+
+El objetivo del sitio es acercar información básica a personas que tienen curiosidad por este deporte, aunque todavía no conozcan sus principales figuras. Se muestran seis campos, con su ubicación y una breve descripción, y ocho golfistas, con su país y sus títulos más importantes.
+
+Para el diseño utilicé un fondo blanco, textos oscuros y detalles grises. Estos colores ayudan a leer el contenido y dejan que el verde de las fotografías sea el protagonista, relacionando la apariencia del sitio con el paisaje del golf. La tipografía es Inter, una fuente sencilla que se distingue bien en diferentes tamaños. Organicé la página en inicio, campos, golfistas y un pie con información del proyecto. Elegí fotografías de los lugares y de los jugadores para que el contenido sea más fácil de identificar. Busqué un estilo ordenado, con tarjetas y espacios entre los elementos.
+
+HTML se utilizó para estructurar los títulos, las secciones, las imágenes y los enlaces. CSS permitió definir los colores, la tipografía y la distribución mediante Grid y Flexbox, además de adaptar la página a distintas pantallas. Un pequeño archivo JavaScript controla el menú del celular. GitHub guarda los archivos y el historial de cambios; GitHub Pages permite publicar el sitio para que cualquiera pueda visitarlo.
+
+Una dificultad fue asegurar que las imágenes se vieran correctamente. Para resolverla, quedaron guardadas en una carpeta del proyecto y se revisaron sus rutas. También se corrigió el menú para que permita navegar desde el celular.
+
+Con este trabajo aprendí cómo se relacionan la estructura y los estilos de una página, la importancia de revisar los enlaces y cómo organizar los archivos para publicar un sitio web.

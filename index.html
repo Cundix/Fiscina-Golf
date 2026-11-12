@@ -3,22 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EL VERDE - Donde comienzan los viajes legendarios</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>El Verde | Campos y figuras del golf</title>
+    <meta name="description" content="Conocé seis campos de golf y ocho figuras que marcaron la historia de este deporte, con fotografías y datos de sus campeonatos.">
+    <meta name="theme-color" content="#111827">
+    <meta property="og:title" content="El Verde | Campos y figuras del golf">
+    <meta property="og:description" content="Un recorrido por los campos y protagonistas del golf.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cundix.github.io/Fiscina-Golf/">
+    <meta property="og:image" content="https://cundix.github.io/Fiscina-Golf/assets/images/ballybunion.webp">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://cundix.github.io/Fiscina-Golf/">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+<header class="header">
         <div class="container header-container">
-            <div class="logo">
-                <div class="logo-icon"></div>
+            <a class="logo" href="#inicio" aria-label="El Verde, inicio">
+                <span class="logo-icon" aria-hidden="true"></span>
                 <span>EL VERDE</span>
-            </div>
+            </a>
             
-            <nav class="desktop-nav">
+            <nav id="menu-principal" class="desktop-nav" aria-label="Navegación principal">
                 <ul>
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#campos">Campos</a></li>
@@ -28,56 +36,50 @@
             </nav>
             
             <div class="header-actions">
-                <button class="btn btn-primary btn-sm">Únete al club</button>
-                <button class="mobile-menu-btn" aria-label="Abrir menú">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                <button class="mobile-menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-principal" hidden>
+                    <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
                 </button>
             </div>
         </div>
     </header>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="inicio" class="hero">
+    <main id="contenido" tabindex="-1">
+<section id="inicio" class="hero">
             <div class="container hero-container">
                 <div class="hero-content">
-                    <h1>Donde comienzan los viajes legendarios</h1>
-                    <p>Explora la herencia, la estructura y los mejores jugadores del juego. Un catálogo limpio de los paisajes y campeones definitivos del golf.</p>
+                    <h1>Campos y leyendas del golf</h1>
+                    <p>Un recorrido por seis campos y ocho figuras que marcaron la historia del golf. Conocé sus paisajes y los logros de sus protagonistas.</p>
                     <div class="hero-buttons">
-                        <a href="#campos" class="btn btn-primary">Explorar Campos</a>
-                        <a href="#golfistas" class="btn btn-outline">Conocer campeones</a>
+                        <a href="#campos" class="btn btn-primary">Ver campos</a>
+                        <a href="#golfistas" class="btn btn-outline">Ver golfistas</a>
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Ballybunion_Golf_Club_-_10th_hole.jpg" alt="Campo de golf legendario" class="hero-image-img" />
+                    <img src="assets/images/ballybunion.webp" width="1280" height="853" decoding="async" fetchpriority="high" alt="Décimo hoyo del campo de Ballybunion, en Irlanda" class="hero-image-img" />
                 </div>
             </div>
         </section>
-
-        <!-- Campos Legendarios Section -->
-        <section id="campos" class="courses section">
+<section id="campos" class="courses section">
             <div class="container">
                 <div class="section-header">
-                    <span class="subtitle">SELECCIÓN CURADA</span>
-                    <h2>Campos Legendarios</h2>
+                    <span class="subtitle">PAISAJES DEL GOLF</span>
+                    <h2>Campos legendarios</h2>
                 </div>
                 
                 <div class="courses-grid">
-                    <!-- Course 1 -->
-                    <div class="course-card">
+<div class="course-card">
                         <div class="course-image">
-                            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/AugustaNationalMastersLogoFlowers.jpg/960px-AugustaNationalMastersLogoFlowers.jpg" alt="Augusta National" />
+                            <img src="assets/images/augusta.webp" width="960" height="640" decoding="async" loading="lazy" alt="Augusta National" />
                         </div>
                         <div class="course-info">
                             <h3>Augusta National</h3>
                             <span class="location">GEORGIA, EE. UU.</span>
-                            <p>Sede del Masters y fairways impecables enmarcados por pinos.</p>
+                            <p>Sede del Masters, conocido por sus calles de césped y sus pinos.</p>
                         </div>
                     </div>
-                    <!-- Course 2 -->
-                    <div class="course-card">
+<div class="course-card">
                         <div class="course-image">
-                            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/Swilken_Bridge%2C_Old_Course_geograph-6310525-by-Gordon-Hatton.jpg/960px-Swilken_Bridge%2C_Old_Course_geograph-6310525-by-Gordon-Hatton.jpg" alt="St Andrews (Old Course)" />
+                            <img src="assets/images/st-andrews.webp" width="960" height="650" decoding="async" loading="lazy" alt="St Andrews (Old Course)" />
                         </div>
                         <div class="course-info">
                             <h3>St Andrews (Old Course)</h3>
@@ -85,10 +87,9 @@
                             <p>La casa histórica del golf con el icónico puente Swilcan y profundos búnkeres.</p>
                         </div>
                     </div>
-                    <!-- Course 3 -->
-                    <div class="course-card">
+<div class="course-card">
                         <div class="course-image">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Pebble_Beach_Golf_Links%2C_hole_7.jpg" alt="Pebble Beach" />
+                            <img src="assets/images/pebble-beach.webp" width="640" height="480" decoding="async" loading="lazy" alt="Pebble Beach" />
                         </div>
                         <div class="course-info">
                             <h3>Pebble Beach</h3>
@@ -96,152 +97,131 @@
                             <p>Acantilados costeros impresionantes que se encuentran con las olas del Pacífico.</p>
                         </div>
                     </div>
-                    <!-- Course 4 -->
-                    <div class="course-card">
+<div class="course-card">
                         <div class="course-image">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/Putting_green_at_the_Royal_Canberra_Golf_Club_4.JPG" alt="Royal Melbourne" />
+                            <img src="assets/images/royal-melbourne.webp" width="960" height="635" decoding="async" loading="lazy" alt="Green del campo Royal Melbourne durante la Presidents Cup" />
                         </div>
                         <div class="course-info">
                             <h3>Royal Melbourne</h3>
                             <span class="location">VICTORIA, AUSTRALIA</span>
-                            <p>El clásico del cinturón de arena australiano con un bunkering dramático.</p>
+                            <p>Un campo australiano reconocido por su suelo arenoso y sus búnkeres.</p>
                         </div>
                     </div>
-                    <!-- Course 5 -->
-                    <div class="course-card">
+<div class="course-card">
                         <div class="course-image">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Pinehurst_No._2.JPG" alt="Pinehurst No. 2" />
+                            <img src="assets/images/pinehurst.webp" width="960" height="640" decoding="async" loading="lazy" alt="Pinehurst No. 2" />
                         </div>
                         <div class="course-info">
                             <h3>Pinehurst No. 2</h3>
                             <span class="location">CAROLINA DEL NORTE, EE. UU.</span>
-                            <p>Obra maestra de Donald Ross famosa por sus greens "turtleback" desafiantes.</p>
+                            <p>Diseñado por Donald Ross, con greens elevados que exigen precisión.</p>
                         </div>
                     </div>
-                    <!-- Course 6 -->
-                    <div class="course-card">
+<div class="course-card">
                         <div class="course-image">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Torrey_Pines_Golf_Course_clubhouse.jpg" alt="Torrey Pines" />
+                            <img src="assets/images/torrey-pines.webp" width="960" height="416" decoding="async" loading="lazy" alt="Torrey Pines" />
                         </div>
                         <div class="course-info">
                             <h3>Torrey Pines</h3>
                             <span class="location">CALIFORNIA, EE. UU.</span>
-                            <p>Campos de campeonato frente al mar tallados en acantilados costeros dramáticos.</p>
+                            <p>Dos recorridos junto a los acantilados de la costa de San Diego.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Los Mejores Golfistas Section -->
-        <section id="golfistas" class="golfers section border-top">
+<section id="golfistas" class="golfers section border-top">
             <div class="container">
                 <div class="section-header">
-                    <span class="subtitle">ÍCONOS DEL FAIRWAY</span>
-                    <h2>Los Mejores Golfistas</h2>
+                    <span class="subtitle">HISTORIA Y CAMPEONATOS</span>
+                    <h2>Figuras del golf</h2>
                 </div>
                 
                 <div class="golfers-grid">
-                    <!-- Golfer 1 -->
-                    <div class="golfer-card">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/President_Donald_Trump_hosts_a_reception_honoring_Black_History_Month_%2854341713089%29_%28cropped%29.jpg" alt="Tiger Woods" class="avatar-img" />
+<div class="golfer-card">
+                        <img src="assets/images/tiger-woods.webp" width="330" height="461" decoding="async" loading="lazy" alt="Tiger Woods" class="avatar-img" />
                         <h3>Tiger Woods</h3>
                         <span class="location">EE. UU.</span>
-                        <div class="stats">15 Victorias en Majors</div>
+                        <div class="stats">15 majors profesionales</div>
                     </div>
-                    <!-- Golfer 2 -->
-                    <div class="golfer-card">
-                        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e9/Panther_National_Jack_and_Justin-8452_%283x4_cropped%29.jpg/960px-Panther_National_Jack_and_Justin-8452_%283x4_cropped%29.jpg" alt="Jack Nicklaus" class="avatar-img" />
+<div class="golfer-card">
+                        <img src="assets/images/jack-nicklaus.webp" width="330" height="440" decoding="async" loading="lazy" alt="Jack Nicklaus" class="avatar-img" />
                         <h3>Jack Nicklaus</h3>
                         <span class="location">EE. UU.</span>
-                        <div class="stats">18 Victorias en Majors</div>
+                        <div class="stats">18 majors profesionales</div>
                     </div>
-                    <!-- Golfer 3 -->
-                    <div class="golfer-card">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/YN3ArnoldPalmer.jpg" alt="Arnold Palmer" class="avatar-img" />
+<div class="golfer-card">
+                        <img src="assets/images/arnold-palmer.webp" width="330" height="462" decoding="async" loading="lazy" alt="Arnold Palmer" class="avatar-img" />
                         <h3>Arnold Palmer</h3>
                         <span class="location">EE. UU.</span>
-                        <div class="stats">7 Victorias en Majors</div>
+                        <div class="stats">7 majors profesionales</div>
                     </div>
-                    <!-- Golfer 4 -->
-                    <div class="golfer-card">
-                        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/All_Black_%28cropped%29.jpg/960px-All_Black_%28cropped%29.jpg" alt="Gary Player" class="avatar-img" />
+<div class="golfer-card">
+                        <img src="assets/images/gary-player.webp" width="400" height="456" decoding="async" loading="lazy" alt="Gary Player" class="avatar-img" />
                         <h3>Gary Player</h3>
                         <span class="location">Sudáfrica</span>
-                        <div class="stats">9 Victorias en Majors</div>
+                        <div class="stats">9 majors profesionales</div>
                     </div>
-                    <!-- Golfer 5 -->
-                    <div class="golfer-card">
-                        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f1/Seve_Ballesteros_2006-07-19_%28cropped%29.jpg/960px-Seve_Ballesteros_2006-07-19_%28cropped%29.jpg" alt="Seve Ballesteros" class="avatar-img" />
+<div class="golfer-card">
+                        <img src="assets/images/seve-ballesteros.webp" width="381" height="600" decoding="async" loading="lazy" alt="Seve Ballesteros" class="avatar-img" />
                         <h3>Seve Ballesteros</h3>
                         <span class="location">España</span>
-                        <div class="stats">5 Victorias en Majors</div>
+                        <div class="stats">5 majors profesionales</div>
                     </div>
-                    <!-- Golfer 6 -->
-                    <div class="golfer-card">
-                        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/02/Rory_McIlroy_Ryder_Cup_2025-195_%28cropped%29.jpg/960px-Rory_McIlroy_Ryder_Cup_2025-195_%28cropped%29.jpg" alt="Rory McIlroy" class="avatar-img" />
+<div class="golfer-card">
+                        <img src="assets/images/rory-mcilroy.webp" width="400" height="533" decoding="async" loading="lazy" alt="Rory McIlroy" class="avatar-img" />
                         <h3>Rory McIlroy</h3>
                         <span class="location">Irlanda del Norte</span>
-                        <div class="stats">4 Victorias en Majors</div>
+                        <div class="stats">6 majors profesionales</div>
                     </div>
-                    <!-- Golfer 7 -->
-                    <div class="golfer-card">
-                        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9f/2008_LPGA_Championship_-_Annika_Sorenstam_tee_shot.jpg/960px-2008_LPGA_Championship_-_Annika_Sorenstam_tee_shot.jpg" alt="Annika Sörenstam" class="avatar-img" />
+<div class="golfer-card">
+                        <img src="assets/images/annika-sorenstam.webp" width="400" height="513" decoding="async" loading="lazy" alt="Annika Sörenstam" class="avatar-img" />
                         <h3>Annika Sörenstam</h3>
                         <span class="location">Suecia</span>
-                        <div class="stats">10 Victorias en Majors</div>
+                        <div class="stats">10 majors profesionales</div>
                     </div>
-                    <!-- Golfer 8 -->
-                    <div class="golfer-card">
-                        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Bobby_Jones_c1921.jpg/960px-Bobby_Jones_c1921.jpg" alt="Bobby Jones" class="avatar-img" />
+<div class="golfer-card">
+                        <img src="assets/images/bobby-jones.webp" width="400" height="596" decoding="async" loading="lazy" alt="Bobby Jones" class="avatar-img" />
                         <h3>Bobby Jones</h3>
                         <span class="location">EE. UU.</span>
-                        <div class="stats">13 Victorias en Majors</div>
+                        <div class="stats">13 títulos: 7 abiertos y 6 amateurs</div>
                     </div>
                 </div>
+                <p class="section-note">Los majors son los principales campeonatos de cada circuito. En el caso de Bobby Jones, el total incluye seis títulos amateurs, considerados grandes campeonatos en su época. Datos revisados en noviembre de 2026.</p>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer id="acerca" class="footer">
         <div class="container">
             <div class="footer-top">
                 <div class="footer-brand">
                     <div class="logo">
-                        <div class="logo-icon"></div>
+                        <span class="logo-icon" aria-hidden="true"></span>
                         <span>EL VERDE</span>
                     </div>
-                    <p>Un boceto integral que explora los destinos y leyendas definitivos del golf. Diseñado para usabilidad a lo TL.</p>
+                    <h2>Acerca del proyecto</h2>
+                    <p>Un sitio informativo sobre los campos y las figuras del golf, desarrollado como proyecto escolar de Desarrollo Web.</p>
                 </div>
-                
+                <nav class="footer-links" aria-label="Navegación del pie">
+                    <h3>Navegación</h3>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#campos">Campos</a></li>
+                        <li><a href="#golfistas">Golfistas</a></li>
+                    </ul>
+                </nav>
                 <div class="footer-links">
-                    <div class="link-group">
-                        <h4>Navegación</h4>
-                        <ul>
-                            <li><a href="#acerca">Acerca de nosotros</a></li>
-                            <li><a href="#campos">Campos</a></li>
-                            <li><a href="#golfistas">Campeones</a></li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="footer-newsletter">
-                    <h4>Boletín</h4>
-                    <p>Suscríbete para recibir actualizaciones semanales sobre reseñas de campos y archivos de torneos.</p>
-                    <form class="newsletter-form">
-                        <input type="email" placeholder="Correo electrónico" required>
-                        <button type="submit" class="btn btn-primary">Suscríbete</button>
-                    </form>
+                    <h3>Fuentes y proyecto</h3>
+                    <ul>
+                        <li><a href="docs/creditos.html">Créditos de imágenes y fuentes</a></li>
+                        <li><a href="https://github.com/Cundix/Fiscina-Golf">Repositorio en GitHub</a></li>
+                    </ul>
                 </div>
             </div>
-            
             <div class="footer-bottom">
-                <p>&copy; 2024 El Verde. Construido en espíritu de usuario.</p>
-                <div class="legal-links">
-                    <a href="#">Política de privacidad</a>
-                    <a href="#">Términos de uso</a>
-                </div>
+                <p>El Verde · Proyecto escolar · 2026</p>
+                <a href="#inicio">Volver al inicio ↑</a>
             </div>
         </div>
     </footer>
